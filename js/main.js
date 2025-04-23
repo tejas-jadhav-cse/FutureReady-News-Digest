@@ -4,6 +4,15 @@ const quoteText = document.getElementById("quoteText");
 const themeToggle = document.getElementById("themeToggle");
 const filters = document.querySelectorAll(".filter");
 
+// --- Added: Map UI categories to valid API categories ---
+const categoryMap = {
+  technology: "technology",
+  ai: "technology",         // AI is part of technology
+  "open-source": "technology", // Open Source is part of technology
+  startup: "business"      // Startups are business news
+};
+// --------------------------------------------------------
+
 // Apply saved theme
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
@@ -16,7 +25,9 @@ themeToggle.addEventListener("click", () => {
 
 filters.forEach(button => {
   button.addEventListener("click", () => {
-    fetchNews(button.dataset.category);
+    // --- Use mapped category for API ---
+    const apiCategory = categoryMap[button.dataset.category] || "technology";
+    fetchNews(apiCategory);
   });
 });
 
