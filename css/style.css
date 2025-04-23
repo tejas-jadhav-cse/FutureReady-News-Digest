@@ -271,3 +271,49 @@ body {
       opacity: 1;
     }
   }
+
+/* Add to style.css */
+#globalSpinner {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .spinner {
+    border: 6px solid #eee;
+    border-top: 6px solid #6200ea;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Add to style.css */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #6200ea;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(98,0,234,0.13);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+    z-index: 2000;
+    font-size: 1rem;
+  }
+  .toast.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  
