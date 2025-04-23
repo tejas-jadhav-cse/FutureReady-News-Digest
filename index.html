@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FutureReady News Digest</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🌐 FutureReady News Digest</h1>
+    <button id="themeToggle">🌙</button>
+    <nav>
+      <button class="filter" data-category="technology">Technology</button>
+      <button class="filter" data-category="ai">AI</button>
+      <button class="filter" data-category="open-source">Open Source</button>
+      <button class="filter" data-category="startup">Startups</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="news">
+      <h2>Latest News</h2>
+      <div id="newsContainer" class="card-container"></div>
+    </section>
+
+    <section id="github">
+      <h2>Trending GitHub Repos</h2>
+      <div id="githubContainer" class="card-container"></div>
+    </section>
+
+    <section id="quote">
+      <h2>💬 Dev Quote of the Day</h2>
+      <blockquote id="quoteText">Loading...</blockquote>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Tejas • Open Source • 2025 🚀</p>
+  </footer>
+</body>
+</html>
 
