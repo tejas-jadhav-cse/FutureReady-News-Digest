@@ -65,31 +65,79 @@ body {
     margin-top: 1rem;
   }
   
-  .card {
+  /* ...existing code... */
+
+.card {
     background: white;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.06);
+    transition: 
+      transform 0.18s cubic-bezier(.4,2,.6,1),
+      box-shadow 0.18s cubic-bezier(.4,2,.6,1),
+      background 0.3s, color 0.3s;
+    font-size: 1.08rem;
+    line-height: 1.6;
   }
   
   .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.025);
+    box-shadow: 0 6px 24px rgba(98,0,234,0.10), 0 2px 8px rgba(0,0,0,0.10);
   }
   
   .dark .card {
-    background-color: #1e1e1e;
-    color: #eee;
+    background-color: #23232b;
+    color: #f3f3f3;
   }
   
   footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #eee;
-    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    background-color: #f8f8fa;
+    margin-top: 2.5rem;
+    color: #666;
+    font-size: 1rem;
+    border-top: 1px solid #e0e0e0;
+    letter-spacing: 0.02em;
   }
   
   .dark footer {
-    background-color: #222;
+    background-color: #18181d;
+    color: #aaa;
+    border-top: 1px solid #23232b;
   }
   
+  /* Additional improvements */
+  nav .filter {
+    background-color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  
+  nav .filter:hover, nav .filter:focus {
+    background-color: #ede7f6;
+    color: #6200ea;
+    outline: none;
+  }
+  
+  @media (max-width: 600px) {
+    .card {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    header h1 {
+      font-size: 1.1rem;
+    }
+    footer {
+      font-size: 0.95rem;
+      padding: 1rem 0.5rem;
+    }
+  }
+  
+  /* ...existing code... */

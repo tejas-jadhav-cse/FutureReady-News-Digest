@@ -24,7 +24,7 @@ filters.forEach(button => {
 async function fetchNews(category = "technology") {
   newsContainer.innerHTML = "Loading...";
   try {
-    const res = await fetch(`https://newsdata.io/api/1/news?apikey=YOUR_API_KEY&category=${category}&language=en`);
+    const res = await fetch(`https://newsdata.io/api/1/news?apikey=pub_825974c8c3a6267daf8e8b422d7af21fd46a1&category=${category}&language=en`);
     const data = await res.json();
     if (data.results) {
       newsContainer.innerHTML = data.results.map(article => `
