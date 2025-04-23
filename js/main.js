@@ -163,6 +163,19 @@ function animateCards(container) {
   });
 }
 
+// --- Back to Top Button ---
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = 'flex';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 // Initialize
 fetchNews();
 fetchGitHubTrending();
