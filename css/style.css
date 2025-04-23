@@ -388,6 +388,43 @@ body {
   background: #311b92;
 }
 
+/* Retry button styles */
+#newsContainer button[id^="retry"],
+#githubContainer button[id^="retry"],
+#quoteText button[id^="retry"] {
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(98,0,234,0.10);
+  transition: background 0.2s, transform 0.18s, box-shadow 0.18s;
+  outline: none;
+}
+#newsContainer button[id^="retry"]:hover,
+#githubContainer button[id^="retry"]:hover,
+#quoteText button[id^="retry"]:hover {
+  background: #311b92;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(98,0,234,0.13);
+}
+body.dark #newsContainer button[id^="retry"],
+body.dark #githubContainer button[id^="retry"],
+body.dark #quoteText button[id^="retry"] {
+  background: #b388ff;
+  color: #23232b;
+}
+body.dark #newsContainer button[id^="retry"]:hover,
+body.dark #githubContainer button[id^="retry"]:hover,
+body.dark #quoteText button[id^="retry"]:hover {
+  background: #7c43bd;
+  color: #fff;
+}
+
 .card p {
   display: -webkit-box;
   -webkit-line-clamp: 4;
