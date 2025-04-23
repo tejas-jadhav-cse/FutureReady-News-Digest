@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     transition: background 0.4s cubic-bezier(.4,2,.6,1), color 0.4s cubic-bezier(.4,2,.6,1);
@@ -316,4 +316,4 @@ body {
     pointer-events: auto;
   }
 
-  
+
