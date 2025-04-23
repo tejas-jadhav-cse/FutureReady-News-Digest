@@ -272,48 +272,111 @@ body {
     }
   }
 
-/* Add to style.css */
-#globalSpinner {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  .spinner {
-    border: 6px solid #eee;
-    border-top: 6px solid #6200ea;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    animation: spin 1s linear infinite;
-  }
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
+/* Accessibility focus style */
+:focus {
+  outline: 2px solid #6200ea;
+  outline-offset: 2px;
+}
 
-  /* Add to style.css */
+/* Spinner styles */
+#globalSpinner {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.spinner {
+  border: 6px solid #eee;
+  border-top: 6px solid #6200ea;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Toast notification styles */
 .toast {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #6200ea;
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(98,0,234,0.13);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.4s;
-    z-index: 2000;
-    font-size: 1rem;
-  }
-  .toast.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #6200ea;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(98,0,234,0.13);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  z-index: 2000;
+  font-size: 1rem;
+}
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Back to Top button */
+#backToTop {
+  position: fixed;
+  right: 2rem;
+  bottom: 2.5rem;
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(98,0,234,0.13);
+  cursor: pointer;
+  z-index: 2100;
+  transition: background 0.2s, transform 0.2s;
+}
+#backToTop:hover {
+  background: #311b92;
+  transform: scale(1.08);
+}
+
+/* Search bar styles */
+#newsSearchBar {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  margin: 1rem 0 1.5rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: border 0.2s;
+}
+#newsSearchBar:focus {
+  border: 1.5px solid #6200ea;
+}
+
+/* Copy Quote button */
+#copyQuoteBtn {
+  margin-left: 1rem;
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#copyQuoteBtn:hover {
+  background: #311b92;
+}
 
 
